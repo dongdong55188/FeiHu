@@ -1,0 +1,14 @@
+次强:成本分布(85),color00ff00,linethick;
+次弱:成本分布(15),coloryellow,linethick;
+弱:成本分布(5),color00ff00,linethick;
+rg:=条件函数(w>0,1,数据位置=系统参数(1));
+画柱线(RG,成本分布(95),成本分布(5),8,0),COLORRED;
+画柱线(RG,成本分布(85),成本分布(15),8,0),COLORBLUE;
+中筹:成本分布(50),LINETHICK2,colorwhite;
+cbw:=(成本分布(97)-成本分布(3))/成本分布(97)*成本分布(50),linethick;
+前60高:=最高值(最高价,60),linethick;
+
+画柱线(收盘价>=开盘价,最高价,最低价,0,0),COLORRED;
+画柱线(收盘价>=开盘价,收盘价,开盘价,8,1),COLORRED;
+画柱线(收盘价<开盘价,最高价,最低价,0,0),COLORCYAN;
+画柱线(收盘价<开盘价,收盘价,开盘价,8,0),COLORCYAN;
